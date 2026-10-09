@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,32 +28,39 @@
         }
     </script>
     <style>
-        /* Custom styles for details/summary to look like accordions */
         details > summary {
             list-style: none;
         }
         details > summary::-webkit-details-marker {
             display: none;
         }
+        .gallery-modal-enter {
+            opacity: 0;
+            transform: scale(0.97);
+        }
+        .gallery-modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 300ms ease-out, transform 300ms ease-out;
+        }
     </style>
 </head>
 <body class="bg-ph-light text-ph-green font-sans antialiased overflow-x-hidden">
 
     <header class="absolute top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center text-white">
-        <div class="text-2xl font-serif tracking-wide">Parkhouse Farm</div>
+        <a href="#" class="text-2xl font-serif tracking-wide">Parkhouse Farm</a>
         
         <nav class="hidden md:flex space-x-10 text-xs font-medium tracking-wide ml-12 mr-auto">
-            <a href="#" class="hover:opacity-75 transition">Parkhouse</a>
-            <a href="#" class="hover:opacity-75 transition">Cottages</a>
-            <a href="#" class="hover:opacity-75 transition">Our Story</a>
-            <a href="#" class="hover:opacity-75 transition">Contact</a>
+            <a href="#parkhouse" class="hover:opacity-75 transition">Parkhouse</a>
+            <a href="#cottages" class="hover:opacity-75 transition">Cottages</a>
+            <a href="#setting" class="hover:opacity-75 transition">The Setting</a>
+            <a href="#good-to-know" class="hover:opacity-75 transition">Good to Know</a>
         </nav>
 
-        <a href="#" class="bg-ph-btn-light text-ph-green px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-ph-btn-light-hover transition rounded-sm">Book Now</a>
+        <a href="#booking" class="bg-ph-btn-light text-ph-green px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-ph-btn-light-hover transition rounded-sm">Book Now</a>
     </header>
 
     <section class="relative h-screen min-h-[600px] flex items-center bg-ph-green">
-        <!-- Hero Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/13ffd4ac39337a2c861ff3a5f07ec94b45349cff/8598423-exteior01-800.jpg" alt="Parkhouse Farm Exterior" class="w-full h-full object-cover opacity-60" />
             <div class="absolute inset-0 bg-black/10"></div>
@@ -67,14 +74,14 @@
                 <p class="text-white text-base md:text-lg mb-10 max-w-2xl leading-relaxed font-light">
                     Five intimate cottages and a grand farmhouse in the heart of the Chew<br>Valley. Private, peaceful, and properly looked after.
                 </p>
-                <a href="#" class="inline-block bg-ph-btn-light text-ph-green px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-ph-btn-light-hover transition rounded-sm">
+                <a href="#booking" class="inline-block bg-ph-btn-light text-ph-green px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-ph-btn-light-hover transition rounded-sm">
                     Enquire About Your Dates
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 md:py-32 px-6 lg:px-12 max-w-[1400px] mx-auto">
+    <section id="parkhouse" class="py-24 md:py-32 px-6 lg:px-12 max-w-[1400px] mx-auto scroll-mt-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="flex flex-col items-start max-w-md mx-auto lg:mx-0 text-center lg:text-left">
                 <div class="bg-ph-btn-gray px-6 py-2 text-[10px] uppercase tracking-[0.2em] mb-12 inline-block w-auto mx-auto lg:mx-0 rounded-sm">
@@ -85,7 +92,7 @@
                     A Grade II listed farmhouse for sixteen, built in 1680 and still standing well. Proper rooms, proper fires, a kitchen made for the long table — and forty acres of Somerset countryside out the back door.
                 </p>
                 <div class="w-full flex justify-center lg:justify-start">
-                    <a href="#" class="inline-block bg-ph-green text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-opacity-90 transition rounded-sm">
+                    <a href="#booking" class="inline-block bg-ph-green text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-opacity-90 transition rounded-sm">
                         Enquire About Your Dates
                     </a>
                 </div>
@@ -98,7 +105,7 @@
 
     <section class="relative py-40 flex items-center justify-center text-center px-6">
         <div class="absolute inset-0 z-0">
-             <img src="https://placehold.co/1920x800/2a3a2d/FFFFFF?text=Garden+View" alt="Garden Background" class="w-full h-full object-cover" />
+             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80" alt="Garden Background" class="w-full h-full object-cover" />
              <div class="absolute inset-0 bg-ph-green/80"></div>
         </div>
         <div class="relative z-10 max-w-4xl mx-auto text-white">
@@ -109,60 +116,87 @@
         </div>
     </section>
 
-    <section class="py-24 md:py-32 px-6 lg:px-12 max-w-[1400px] mx-auto">
+    <section id="cottages" class="py-24 md:py-32 px-6 lg:px-12 max-w-[1400px] mx-auto scroll-mt-10">
         <div class="text-center mb-16 flex flex-col items-center">
             <div class="bg-ph-btn-gray px-6 py-2 text-[10px] uppercase tracking-[0.2em] mb-10 inline-block rounded-sm">
                 At A Glance
             </div>
-            <h2 class="text-4xl md:text-[3.5rem] font-serif mb-8 text-[#222]">Our Stays</h2>
+            <h2 class="text-4xl md:text-[3.5rem] font-serif mb-8 text-[#222]">Cottages</h2>
             <p class="max-w-2xl mx-auto text-sm text-[#444] font-light italic">
-                Four self-contained cottages set around the grounds — privacy when you want it, the rest of the farm when you don't.
+                Four self-contained cottages set around the grounds — click any cottage to explore photo portfolio.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-            <!-- Cottage 1 -->
-            <div class="group cursor-pointer flex flex-col">
-                <div class="overflow-hidden mb-6 aspect-[4/3]">
-                    <img src="https://placehold.co/600x450/d3d0c8/1f3123?text=Bluebell" alt="Bluebell Cottage" class="w-full h-full object-cover" />
+            <!-- Cottage 1: Bluebell -->
+            <div onclick="openGallery('bluebell')" class="group cursor-pointer flex flex-col bg-white/40 p-3 rounded hover:shadow-xl transition-all duration-300 border border-black/5">
+                <div class="relative overflow-hidden mb-6 aspect-[4/3] rounded-sm">
+                    <img src="https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/2245f01d0d5905f4c25225a5b8fef533f7146d83/images/bluebell.jpg" alt="Bluebell Cottage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute bottom-3 right-3 bg-ph-green/85 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded backdrop-blur-sm opacity-90 group-hover:opacity-100 transition">
+                        4 Photos
+                    </span>
                 </div>
-                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222]">Bluebell</h3>
+                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222] group-hover:text-ph-green transition">Bluebell</h3>
                 <p class="text-[11px] mb-6 text-[#555] font-light">Sleeps 2 · king or twins · paddock views.</p>
-                <div class="mt-auto">
-                    <a href="#" class="bg-ph-btn-gray text-ph-green px-6 py-3 text-[9px] font-medium uppercase tracking-[0.15em] hover:bg-gray-200 transition inline-block rounded-sm">Check Availability</a>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-black/5">
+                    <button type="button" class="bg-ph-btn-gray text-ph-green px-5 py-2.5 text-[9px] font-medium uppercase tracking-[0.15em] group-hover:bg-ph-green group-hover:text-white transition rounded-sm">
+                        View Portfolio
+                    </button>
+                    <span class="text-xs text-ph-green/60 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
-            <!-- Cottage 2 -->
-            <div class="group cursor-pointer flex flex-col">
-                <div class="overflow-hidden mb-6 aspect-[4/3]">
-                    <img src="https://placehold.co/600x450/d3d0c8/1f3123?text=Poppy" alt="Poppy Cottage" class="w-full h-full object-cover" />
+
+            <!-- Cottage 2: Poppy -->
+            <div onclick="openGallery('poppy')" class="group cursor-pointer flex flex-col bg-white/40 p-3 rounded hover:shadow-xl transition-all duration-300 border border-black/5">
+                <div class="relative overflow-hidden mb-6 aspect-[4/3] rounded-sm">
+                    <img src="https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/18f266df23841cfa5a4e23a0e6b350afbc160943/images/front-stable-scaled.jpg" alt="Poppy Cottage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute bottom-3 right-3 bg-ph-green/85 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded backdrop-blur-sm opacity-90 group-hover:opacity-100 transition">
+                        4 Photos
+                    </span>
                 </div>
-                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222]">Poppy</h3>
+                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222] group-hover:text-ph-green transition">Poppy</h3>
                 <p class="text-[11px] mb-6 text-[#555] font-light">Sleeps 2 · king or twins · fully fenced garden.</p>
-                <div class="mt-auto">
-                    <a href="#" class="bg-ph-btn-gray text-ph-green px-6 py-3 text-[9px] font-medium uppercase tracking-[0.15em] hover:bg-gray-200 transition inline-block rounded-sm">Check Availability</a>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-black/5">
+                    <button type="button" class="bg-ph-btn-gray text-ph-green px-5 py-2.5 text-[9px] font-medium uppercase tracking-[0.15em] group-hover:bg-ph-green group-hover:text-white transition rounded-sm">
+                        View Portfolio
+                    </button>
+                    <span class="text-xs text-ph-green/60 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
-             <!-- Cottage 3 -->
-             <div class="group cursor-pointer flex flex-col">
-                <div class="overflow-hidden mb-6 aspect-[4/3]">
-                    <img src="https://placehold.co/600x450/d3d0c8/1f3123?text=Lily+of+the+Valley" alt="Lily of the Valley" class="w-full h-full object-cover" />
+
+            <!-- Cottage 3: Lily of the Valley -->
+            <div onclick="openGallery('lily')" class="group cursor-pointer flex flex-col bg-white/40 p-3 rounded hover:shadow-xl transition-all duration-300 border border-black/5">
+                <div class="relative overflow-hidden mb-6 aspect-[4/3] rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80" alt="Lily of the Valley" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute bottom-3 right-3 bg-ph-green/85 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded backdrop-blur-sm opacity-90 group-hover:opacity-100 transition">
+                        4 Photos
+                    </span>
                 </div>
-                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222]">Lily of the Valley</h3>
+                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222] group-hover:text-ph-green transition">Lily of the Valley</h3>
                 <p class="text-[11px] mb-6 text-[#555] font-light">Sleeps 2 · double · bath + workspace.</p>
-                <div class="mt-auto">
-                    <a href="#" class="bg-ph-btn-gray text-ph-green px-6 py-3 text-[9px] font-medium uppercase tracking-[0.15em] hover:bg-gray-200 transition inline-block rounded-sm">Check Availability</a>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-black/5">
+                    <button type="button" class="bg-ph-btn-gray text-ph-green px-5 py-2.5 text-[9px] font-medium uppercase tracking-[0.15em] group-hover:bg-ph-green group-hover:text-white transition rounded-sm">
+                        View Portfolio
+                    </button>
+                    <span class="text-xs text-ph-green/60 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
-             <!-- Cottage 4 -->
-             <div class="group cursor-pointer flex flex-col">
-                <div class="overflow-hidden mb-6 aspect-[4/3]">
-                    <img src="https://placehold.co/600x450/d3d0c8/1f3123?text=Bellflower" alt="Bellflower" class="w-full h-full object-cover" />
+
+            <!-- Cottage 4: Bellflower -->
+            <div onclick="openGallery('bellflower')" class="group cursor-pointer flex flex-col bg-white/40 p-3 rounded hover:shadow-xl transition-all duration-300 border border-black/5">
+                <div class="relative overflow-hidden mb-6 aspect-[4/3] rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Bellflower" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute bottom-3 right-3 bg-ph-green/85 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded backdrop-blur-sm opacity-90 group-hover:opacity-100 transition">
+                        4 Photos
+                    </span>
                 </div>
-                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222]">Bellflower</h3>
+                <h3 class="text-[1.75rem] font-serif mb-2 text-[#222] group-hover:text-ph-green transition">Bellflower</h3>
                 <p class="text-[11px] mb-6 text-[#555] font-light">Sleeps 2 · queen · 1.5 baths · 1680 heritage.</p>
-                <div class="mt-auto">
-                    <a href="#" class="bg-ph-btn-gray text-ph-green px-6 py-3 text-[9px] font-medium uppercase tracking-[0.15em] hover:bg-gray-200 transition inline-block rounded-sm">Check Availability</a>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-black/5">
+                    <button type="button" class="bg-ph-btn-gray text-ph-green px-5 py-2.5 text-[9px] font-medium uppercase tracking-[0.15em] group-hover:bg-ph-green group-hover:text-white transition rounded-sm">
+                        View Portfolio
+                    </button>
+                    <span class="text-xs text-ph-green/60 group-hover:translate-x-1 transition-transform">→</span>
                 </div>
             </div>
         </div>
@@ -180,46 +214,40 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-            <!-- Event 1 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Weddings" alt="Weddings & Celebrations" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Weddings & Celebrations" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Weddings & Celebrations</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">A small, private ceremony in the gardens. Long tables under the trees. The whole place, your whole guest list.</p>
             </div>
-            <!-- Event 2 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Family+Reunions" alt="Family Reunions" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80" alt="Family Reunions" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Family Reunions</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">Three generations, one place. Cousins in the cottages, grandparents in the main house, kids in the paddock.</p>
             </div>
-            <!-- Event 3 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Hen+%26+Stag" alt="Hen & Stag Weekends" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Hen & Stag Weekends" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Hen & Stag Weekends</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">Big enough for the group, quiet enough for the morning after. No neighbours to wake.</p>
             </div>
-            <!-- Event 4 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Team+Retreats" alt="Team Retreats" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Retreats" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Team Retreats</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">A farmhouse kitchen with proper internet, long tables, and the kind of stillness that makes strategy days feel productive.</p>
             </div>
-            <!-- Event 5 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Milestones" alt="Milestone Birthdays" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Milestone Birthdays" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Milestone Birthdays</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">Forty, fifty, sixty, seventy. A weekend everyone remembers, in a place that looks the part.</p>
             </div>
-            <!-- Event 6 -->
             <div>
-                <img src="https://placehold.co/800x600/e0dcd3/1f3123?text=Christmas" alt="Christmas & New Year" class="w-full h-auto object-cover aspect-[4/3] mb-6" />
+                <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=800&q=80" alt="Christmas & New Year" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                 <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Christmas & New Year</h3>
                 <p class="text-xs leading-relaxed text-[#444] font-light">A proper, slow holiday — fires lit, kitchen full, all the family under one roof and five cottages.</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-ph-green text-ph-light py-24 md:py-32 px-6 lg:px-12">
+    <section id="setting" class="bg-ph-green text-ph-light py-24 md:py-32 px-6 lg:px-12 scroll-mt-10">
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
                 <h2 class="text-4xl md:text-6xl font-serif mb-8">The Setting</h2>
@@ -229,54 +257,49 @@
             </div>
             
             <div class="flex flex-col border-t border-ph-light/30">
-                <!-- Accordion Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
                         Bath
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-6 text-ph-light/80">
-                        Details about proximity to Bath would go here.
+                    <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
+                        Just 20 minutes away. World-famous Georgian architecture, Roman Baths, independent dining, and boutique shopping.
                     </div>
                 </details>
-                <!-- Accordion Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
                         Bristol
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-6 text-ph-light/80">
-                        Details about proximity to Bristol would go here.
+                    <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
+                        Under 25 minutes drive. Harbourside culture, vibrant food scene, theaters, and Clifton Suspension Bridge.
                     </div>
                 </details>
-                <!-- Accordion Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
                         Cotswold
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-6 text-ph-light/80">
-                        Information about the Cotswolds connection.
+                    <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
+                        An easy day trip north. Rolling hills, honey-colored stone villages, and classic English countryside walks.
                     </div>
                 </details>
-                <!-- Accordion Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
                         Cheddar Gorge & Mendips
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-6 text-ph-light/80">
-                        Details about visiting Cheddar Gorge.
+                    <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
+                        Dramatic limestone cliffs, cave tours, and breathtaking ridge walks across the Mendip Hills AONB.
                     </div>
                 </details>
-                <!-- Accordion Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
                         Keynsham
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-6 text-ph-light/80">
-                        Local information about Keynsham.
+                    <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
+                        Our local town a short walk or drive away — weekly markets, artisanal bakeries, cozy pubs, and train connections.
                     </div>
                 </details>
             </div>
@@ -289,7 +312,7 @@
 
     <section class="bg-ph-green text-ph-light py-24 px-6 lg:px-12 text-center">
         <h2 class="text-4xl md:text-5xl font-serif mb-4">Loved by Guests</h2>
-        <div class="inline-flex items-center space-x-2 text-sm uppercase tracking-widest border border-ph-light/30 px-6 py-2 mb-16">
+        <div class="inline-flex items-center space-x-2 text-sm uppercase tracking-widest border border-ph-light/30 px-6 py-2 mb-16 rounded-sm">
             <span>4.99★</span>
             <span>|</span>
             <span>130+ Reviews</span>
@@ -321,15 +344,15 @@
         </div>
     </section>
 
-    <section class="py-24 px-6 lg:px-12 text-center">
-        <div class="border border-ph-green px-6 py-2 text-xs uppercase tracking-widest mb-8 inline-block">
+    <section id="booking" class="py-24 px-6 lg:px-12 text-center scroll-mt-10">
+        <div class="border border-ph-green px-6 py-2 text-xs uppercase tracking-widest mb-8 inline-block rounded-sm">
             At A Glance
         </div>
         <h2 class="text-4xl md:text-5xl font-serif mb-8">How to Book</h2>
         <p class="max-w-2xl mx-auto text-lg leading-relaxed mb-10">
             The whole estate is booked by enquiry — no online checkout. Tell us your dates, group size, and what the weekend is for. We'll come back the same day with availability, a quote, and any local recommendations you'll need.
         </p>
-        <a href="#" class="inline-block bg-ph-green text-white px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-opacity-90 transition mb-6">
+        <a href="mailto:info@demogroup.com" class="inline-block bg-ph-green text-white px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-opacity-90 transition mb-6 rounded-sm">
             Enquire About Your Dates
         </a>
         <p class="text-sm">
@@ -337,10 +360,10 @@
         </p>
     </section>
 
-    <section class="bg-ph-green text-ph-light py-24 md:py-32 px-6 lg:px-12">
-         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+    <section id="good-to-know" class="bg-ph-green text-ph-light py-24 md:py-32 px-6 lg:px-12 scroll-mt-10">
+         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:gap-24 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-5 text-center lg:text-left">
-                <div class="border border-ph-light/50 px-6 py-2 text-xs uppercase tracking-widest mb-8 inline-block">
+                <div class="border border-ph-light/50 px-6 py-2 text-xs uppercase tracking-widest mb-8 inline-block rounded-sm">
                     Frequently Asked Questions
                 </div>
                 <h2 class="text-4xl md:text-5xl font-serif mb-6">Good to Know</h2>
@@ -350,75 +373,67 @@
             </div>
             
             <div class="lg:col-span-7 flex flex-col border-t border-ph-light/30">
-                <!-- FAQ Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Self check-in
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Information about self check-in process.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Keypad entry codes provided 48 hours prior to arrival.</div>
                 </details>
-                 <!-- FAQ Item -->
-                 <details class="group border-b border-ph-light/30 cursor-pointer">
+                <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Check-in & check-out
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Times for check-in and check-out.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Check-in from 3:00 PM · Check-out by 10:00 AM.</div>
                 </details>
-                 <!-- FAQ Item -->
-                 <details class="group border-b border-ph-light/30 cursor-pointer">
+                <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Minimum stay
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Details on minimum night requirements.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">2 nights standard, 3 nights for holiday weekends.</div>
                 </details>
-                 <!-- FAQ Item -->
-                 <details class="group border-b border-ph-light/30 cursor-pointer">
+                <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Pets
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Pet policy information.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Dogs welcome in designated cottages with private enclosed gardens.</div>
                 </details>
-                 <!-- FAQ Item -->
-                 <details class="group border-b border-ph-light/30 cursor-pointer">
+                <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Parking
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Parking availability and details.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Free off-street private parking right next to each cottage.</div>
                 </details>
-                 <!-- FAQ Item -->
-                 <details class="group border-b border-ph-light/30 cursor-pointer">
+                <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Cot & high chair
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Availability of baby equipment.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Available upon request prior to arrival.</div>
                 </details>
-                <!-- FAQ Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Wifi & workspace
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Internet and desk setup details.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">High-speed fiber optic WiFi throughout all cottages.</div>
                 </details>
-                <!-- FAQ Item -->
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-5 text-lg hover:text-white transition">
                         Cancellation
                         <span class="text-xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
-                    <div class="pb-5 text-sm text-ph-light/80">Cancellation policy rules.</div>
+                    <div class="pb-5 text-sm text-ph-light/80">Full refund up to 14 days before check-in.</div>
                 </details>
             </div>
          </div>
     </section>
 
-    <footer class="bg-ph-green text-ph-light py-24 px-6 text-center">
+    <footer id="contact" class="bg-ph-green text-ph-light py-24 px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-serif mb-12">Parkhouse Farm</h2>
         
         <div class="mb-12 text-sm leading-relaxed">
@@ -435,5 +450,202 @@
         </p>
     </footer>
 
+    <div id="gallery-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 md:p-8 bg-ph-green/95 backdrop-blur-md overflow-y-auto transition-opacity duration-300">
+        <div class="relative w-full max-w-5xl bg-ph-light text-ph-green rounded-md shadow-2xl p-6 md:p-10 my-auto border border-ph-btn-gray">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-start pb-6 mb-6 border-b border-ph-green/10">
+                <div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] bg-ph-btn-gray px-3 py-1 rounded text-ph-green font-medium">Cottage Portfolio</span>
+                    <h3 id="modal-title" class="text-3xl md:text-4xl font-serif mt-2">Cottage Title</h3>
+                    <p id="modal-subtitle" class="text-xs md:text-sm text-ph-green/70 font-light mt-1">Cottage Details</p>
+                </div>
+                <button onclick="closeGallery()" class="text-2xl font-light hover:rotate-90 transition-transform duration-300 p-2 text-ph-green hover:text-black focus:outline-none" aria-label="Close Gallery">
+                    ✕
+                </button>
+            </div>
+
+            <!-- 4-Picture Grid -->
+            <div id="modal-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <!-- 4 Photo items dynamically injected -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="mt-8 pt-6 border-t border-ph-green/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-ph-green/60 italic font-serif">Click any picture to expand full screen</p>
+                <a href="#booking" onclick="closeGallery()" class="inline-block bg-ph-green text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-opacity-90 transition rounded-sm w-full sm:w-auto text-center">
+                    Enquire About These Dates
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox-overlay" class="fixed inset-0 z-[60] hidden bg-black/95 items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-light hover:opacity-75 transition">✕</button>
+        <img id="lightbox-img" src="" alt="Expanded View" class="max-w-full max-h-[85vh] object-contain rounded shadow-2xl" />
+        <p id="lightbox-caption" class="absolute bottom-6 text-white/80 text-xs md:text-sm font-serif italic tracking-wide text-center px-4"></p>
+    </div>
+
+    <script>
+        // Cottage Gallery Data (4 images per cottage)
+        const cottageGalleries = {
+            bluebell: {
+                title: "Bluebell Cottage",
+                subtitle: "Sleeps 2 · King or Twins · Paddock Views",
+                images: [
+                    {
+                        src: "https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/2245f01d0d5905f4c25225a5b8fef533f7146d83/images/bluebell.jpg",
+                        caption: "Exterior facade surrounded by countryside blooms"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1540518614846-7ede433c5172?auto=format&fit=crop&w=800&q=80",
+                        caption: "Spacious master bedroom with king bed setup"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+                        caption: "Warm living area with rustic wood trim & comfortable lounge"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+                        caption: "Uninterrupted panoramic view across the green paddocks"
+                    }
+                ]
+            },
+            poppy: {
+                title: "Poppy Cottage",
+                subtitle: "Sleeps 2 · King or Twins · Fully Fenced Private Garden",
+                images: [
+                    {
+                        src: "https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/18f266df23841cfa5a4e23a0e6b350afbc160943/images/front-stable-scaled.jpg",
+                        caption: "Front view of the rustic stable cottage exterior"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80",
+                        caption: "Luminous bedroom suite with natural linens"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+                        caption: "Fully equipped kitchen and breakfast dining corner"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80",
+                        caption: "Secure enclosed garden space ideal for relaxing with pets"
+                    }
+                ]
+            },
+            lily: {
+                title: "Lily of the Valley",
+                subtitle: "Sleeps 2 · Double · Soaking Bath + Dedicated Workspace",
+                images: [
+                    {
+                        src: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80",
+                        caption: "Charming cottage cottage porch overlooking mature trees"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
+                        caption: "Cozy alcove bedroom with quiet ambiance"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+                        caption: "Elegant bathroom with deep soaking tub"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+                        caption: "Quiet work desk with fast WiFi and garden views"
+                    }
+                ]
+            },
+            bellflower: {
+                title: "Bellflower Cottage",
+                subtitle: "Sleeps 2 · Queen Suite · 1.5 Baths · 1680 Heritage Stone",
+                images: [
+                    {
+                        src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
+                        caption: "Historic 1680 stone cottage architecture"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&w=800&q=80",
+                        caption: "Master queen suite with exposed beam ceiling"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+                        caption: "Inviting sitting room with wood-burning fireplace"
+                    },
+                    {
+                        src: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80",
+                        caption: "En-suite bathroom with heritage fixtures and walk-in shower"
+                    }
+                ]
+            }
+        };
+
+        // Open Gallery Modal Function
+        function openGallery(cottageKey) {
+            const data = cottageGalleries[cottageKey];
+            if (!data) return;
+
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-subtitle').textContent = data.subtitle;
+
+            const gridContainer = document.getElementById('modal-grid');
+            gridContainer.innerHTML = '';
+
+            data.images.forEach((imgObj, idx) => {
+                const card = document.createElement('div');
+                card.className = "group relative overflow-hidden rounded cursor-pointer aspect-[4/3] bg-ph-btn-gray shadow-sm hover:shadow-lg transition duration-300";
+                card.onclick = () => openLightbox(imgObj.src, imgObj.caption);
+
+                card.innerHTML = `
+                    <img src="${imgObj.src}" alt="${imgObj.caption}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-xs font-light font-serif leading-snug">${imgObj.caption}</p>
+                    </div>
+                `;
+                gridContainer.appendChild(card);
+            });
+
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close Gallery Modal
+        function closeGallery() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Full Screen Lightbox Functions
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            const lightbox = document.getElementById('lightbox-overlay');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox-overlay');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        // Close modals on Escape key or backdrop click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeGallery();
+            }
+        });
+
+        document.getElementById('gallery-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'gallery-modal') {
+                closeGallery();
+            }
+        });
+    </script>
 </body>
 </html>
