@@ -277,7 +277,7 @@
                 </details>
                 <details class="group border-b border-ph-light/30 cursor-pointer">
                     <summary class="flex justify-between items-center w-full py-6 text-xl md:text-2xl hover:text-white transition">
-                        Cotswold
+                        Cotswolds
                         <span class="text-2xl font-light group-open:rotate-45 transition-transform duration-300">+</span>
                     </summary>
                     <div class="pb-6 text-ph-light/80 text-sm leading-relaxed">
@@ -352,11 +352,11 @@
         <p class="max-w-2xl mx-auto text-lg leading-relaxed mb-10">
             The whole estate is booked by enquiry — no online checkout. Tell us your dates, group size, and what the weekend is for. We'll come back the same day with availability, a quote, and any local recommendations you'll need.
         </p>
-        <a href="mailto:info@demogroup.com" class="inline-block bg-ph-green text-white px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-opacity-90 transition mb-6 rounded-sm">
+        <a href="mailto:info@parkhouse-farm.co.uk" class="inline-block bg-ph-green text-white px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-opacity-90 transition mb-6 rounded-sm">
             Enquire About Your Dates
         </a>
         <p class="text-sm">
-            <a href="mailto:info@demogroup.com" class="border-b border-ph-green pb-0.5">info@demogroup.com</a> · Same day reply, weekdays. Calls and meetings on request.
+            <a href="mailto:info@parkhouse-farm.co.uk" class="border-b border-ph-green pb-0.5">info@parkhouse-farm.co.uk</a> · Same day reply, weekdays. Calls and meetings on request.
         </p>
     </section>
 
@@ -440,8 +440,7 @@
             <p class="mb-4">Get in Touch</p>
             <p>Parkhouse Farm,<br>Keynsham, Somerset, UK</p>
             <p class="mt-4">
-                <a href="tel:0000000000" class="hover:underline">000 000-0000</a><br>
-                <a href="mailto:info@demo.com" class="hover:underline">info@demo.com</a>
+                <a href="mailto:info@parkhouse-farm.co.uk" class="hover:underline">info@parkhouse-farm.co.uk</a>
             </p>
         </div>
 
@@ -487,7 +486,6 @@
     </div>
 
     <script>
-        // Cottage Gallery Data (4 images per cottage)
         const cottageGalleries = {
             bluebell: {
                 title: "Bluebell Cottage",
@@ -539,7 +537,7 @@
                 images: [
                     {
                         src: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80",
-                        caption: "Charming cottage cottage porch overlooking mature trees"
+                        caption: "Charming cottage porch overlooking mature trees"
                     },
                     {
                         src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80",
@@ -579,7 +577,6 @@
             }
         };
 
-        // Open Gallery Modal Function
         function openGallery(cottageKey) {
             const data = cottageGalleries[cottageKey];
             if (!data) return;
@@ -610,7 +607,6 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // Close Gallery Modal
         function closeGallery() {
             const modal = document.getElementById('gallery-modal');
             modal.classList.add('hidden');
@@ -618,7 +614,6 @@
             document.body.style.overflow = '';
         }
 
-        // Full Screen Lightbox Functions
         function openLightbox(src, caption) {
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox-caption').textContent = caption;
@@ -633,7 +628,6 @@
             lightbox.classList.remove('flex');
         }
 
-        // Close modals on Escape key or backdrop click
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeLightbox();
