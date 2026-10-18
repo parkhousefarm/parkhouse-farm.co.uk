@@ -69,8 +69,8 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.99",
-            "reviewCount": "130"
+            "ratingValue": "4.85",
+            "reviewCount": "95"
           },
           "containsPlace": [
             {
@@ -242,14 +242,20 @@
                     <p class="text-sm md:text-base mb-12 leading-relaxed text-[#444] font-light">
                         A Grade II listed farmhouse for sixteen, built in 1680 and still standing well. Proper rooms, proper fires, a kitchen made for the long table — and forty acres of Somerset countryside out the back door.
                     </p>
-                    <div class="w-full flex justify-center lg:justify-start">
-                        <a href="#booking" class="inline-block bg-ph-green text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-opacity-90 transition rounded-sm">
+                    <div class="w-full flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <button onclick="openGallery('parkhouse')" class="inline-block bg-ph-btn-gray text-ph-green px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-ph-green hover:text-white transition rounded-sm border border-transparent">
+                            View Portfolio
+                        </button>
+                        <a href="#booking" class="inline-block bg-ph-green text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-opacity-90 transition rounded-sm text-center">
                             Enquire About Your Dates
                         </a>
                     </div>
                 </div>
-                <div class="w-full">
-                    <img src="https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/c3eb50594d85b7a1b6406431d6de23297c5492db/8598423-exteior33-800.jpg" alt="The Parkhouse Main House Exterior" class="w-full h-auto object-cover" />
+                <div class="w-full group cursor-pointer relative" onclick="openGallery('parkhouse')" role="button" aria-label="View Parkhouse Portfolio" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openGallery('parkhouse')">
+                    <img src="https://raw.githubusercontent.com/parkhousefarm/parkhouse-farm.co.uk/c3eb50594d85b7a1b6406431d6de23297c5492db/8598423-exteior33-800.jpg" alt="The Parkhouse Main House Exterior" class="w-full h-auto object-cover rounded-sm shadow-sm group-hover:shadow-xl transition-all duration-300" />
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-sm flex items-center justify-center">
+                        <span class="bg-ph-green/90 text-white text-[10px] uppercase tracking-widest px-4 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">View Gallery</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -366,29 +372,14 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Weddings & Celebrations at Parkhouse Farm" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
-                    <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Weddings & Celebrations</h3>
-                    <p class="text-xs leading-relaxed text-[#444] font-light">A small, private ceremony in the gardens. Long tables under the trees. The whole place, your whole guest list.</p>
-                </div>
-                <div>
                     <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80" alt="Family Reunions at Parkhouse Farm" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                     <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Family Reunions</h3>
                     <p class="text-xs leading-relaxed text-[#444] font-light">Three generations, one place. Cousins in the cottages, grandparents in the main house, kids in the paddock.</p>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Hen & Stag Weekends" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
-                    <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Hen & Stag Weekends</h3>
-                    <p class="text-xs leading-relaxed text-[#444] font-light">Big enough for the group, quiet enough for the morning after. No neighbours to wake.</p>
-                </div>
-                <div>
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Retreats at Parkhouse Farm" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
                     <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Team Retreats</h3>
                     <p class="text-xs leading-relaxed text-[#444] font-light">A farmhouse kitchen with proper internet, long tables, and the kind of stillness that makes strategy days feel productive.</p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Milestone Birthdays" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
-                    <h3 class="text-[1.75rem] font-serif mb-3 text-[#222]">Milestone Birthdays</h3>
-                    <p class="text-xs leading-relaxed text-[#444] font-light">Forty, fifty, sixty, seventy. A weekend everyone remembers, in a place that looks the part.</p>
                 </div>
                 <div>
                     <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=800&q=80" alt="Christmas & New Year Stays" class="w-full h-auto object-cover aspect-[4/3] mb-6 rounded-sm" />
@@ -464,13 +455,13 @@
         <section class="bg-ph-green text-ph-light py-24 px-6 lg:px-12 text-center">
             <h2 class="text-4xl md:text-5xl font-serif mb-4">Loved by Guests</h2>
             <div class="inline-flex items-center space-x-2 text-sm uppercase tracking-widest border border-ph-light/30 px-6 py-2 mb-16 rounded-sm">
-                <span>4.99★</span>
+                <span>4.85★</span>
                 <span>|</span>
-                <span>130+ Reviews</span>
+                <span>95 Reviews</span>
                 <span>|</span>
                 <span>Superhost</span>
                 <span>|</span>
-                <span>10+ years hosting</span>
+                <span>4 months hosting</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-[1400px] mx-auto text-left">
@@ -608,7 +599,7 @@
             <!-- Modal Header -->
             <div class="flex justify-between items-start pb-6 mb-6 border-b border-ph-green/10">
                 <div>
-                    <span class="text-[10px] uppercase tracking-[0.2em] bg-ph-btn-gray px-3 py-1 rounded text-ph-green font-medium">Cottage Portfolio</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] bg-ph-btn-gray px-3 py-1 rounded text-ph-green font-medium">Portfolio</span>
                     <h3 id="modal-title" class="text-3xl md:text-4xl font-serif mt-2">Cottage Title</h3>
                     <p id="modal-subtitle" class="text-xs md:text-sm text-ph-green/70 font-light mt-1">Cottage Details</p>
                 </div>
@@ -641,6 +632,11 @@
 
     <script>
         const cottageGalleries = {
+            parkhouse: {
+                title: "The Parkhouse",
+                subtitle: "Sleeps 16 · Grade II Listed Farmhouse · Proper Fires & Long Tables",
+                images: [] // Leaving empty so we can dynamically fetch from the folder
+            },
             bluebell: {
                 title: "Bluebell Cottage",
                 subtitle: "Sleeps 2 · King or Twins · Paddock Views",
@@ -731,16 +727,52 @@
             }
         };
 
-        function openGallery(cottageKey) {
+        async function openGallery(cottageKey) {
             const data = cottageGalleries[cottageKey];
             if (!data) return;
+
+            const modal = document.getElementById('gallery-modal');
+            const gridContainer = document.getElementById('modal-grid');
+
+            // Open modal immediately to show status
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
 
             document.getElementById('modal-title').textContent = data.title;
             document.getElementById('modal-subtitle').textContent = data.subtitle;
 
-            const gridContainer = document.getElementById('modal-grid');
-            gridContainer.innerHTML = '';
+            // Handle Dynamic GitHub Folder Loading for "The Parkhouse"
+            if (cottageKey === 'parkhouse' && data.images.length === 0) {
+                gridContainer.innerHTML = '<div class="col-span-full py-12 text-center text-sm font-serif italic text-ph-green/60">Loading portfolio directly from folder...</div>';
+                
+                try {
+                    // Fetch the directory contents from GitHub's REST API
+                    const response = await fetch('https://api.github.com/repos/parkhousefarm/parkhouse-farm.co.uk/contents/parkhouse');
+                    
+                    if (response.ok) {
+                        const files = await response.json();
+                        // Filter for images and build the array dynamically (now including avif)
+                        data.images = files
+                            .filter(file => file.name.match(/\.(jpg|jpeg|png|webp|gif|avif)$/i))
+                            .map(file => ({
+                                src: file.download_url,
+                                // Make a nice caption out of the filename (e.g., "front-view.jpg" -> "front view")
+                                caption: file.name.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " ") 
+                            }));
+                    } else {
+                        gridContainer.innerHTML = '<div class="col-span-full py-12 text-center text-sm text-red-800">Unable to load images right now.</div>';
+                        return;
+                    }
+                } catch (error) {
+                    console.error("Error fetching images:", error);
+                    gridContainer.innerHTML = '<div class="col-span-full py-12 text-center text-sm text-red-800">Error connecting to image folder.</div>';
+                    return;
+                }
+            }
 
+            // Render Images into the grid
+            gridContainer.innerHTML = '';
             data.images.forEach((imgObj) => {
                 const card = document.createElement('div');
                 card.className = "group relative overflow-hidden rounded cursor-pointer aspect-[4/3] bg-ph-btn-gray shadow-sm hover:shadow-lg transition duration-300";
@@ -764,7 +796,7 @@
                 overlay.className = "absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4";
 
                 const caption = document.createElement('p');
-                caption.className = "text-white text-xs font-light font-serif leading-snug";
+                caption.className = "text-white text-xs font-light font-serif leading-snug capitalize";
                 caption.textContent = imgObj.caption;
 
                 overlay.appendChild(caption);
@@ -772,11 +804,6 @@
                 card.appendChild(overlay);
                 gridContainer.appendChild(card);
             });
-
-            const modal = document.getElementById('gallery-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
         }
 
         function closeGallery() {
